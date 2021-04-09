@@ -11,7 +11,6 @@ const login = require("./routes/login");
 const user = require("./routes/user");
 const emailVerify = require("./routes/emailVerify");
 const passwordReset = require("./routes/passwordReset");
-const profileUpload = require("./routes/profileUpload");
 
 (async function () {
   await connection();
@@ -24,7 +23,6 @@ app.use("/api/register", register);
 app.use("/api/login", login);
 app.use("/api/verify", emailVerify);
 app.use("/api/password-reset", passwordReset);
-app.use("/api/upload", profileUpload);
 app.use("/api/me", user);
 
 app.use(express.static(path.join(__dirname, "build")));
